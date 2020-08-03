@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/style.css">
+
+    <link rel="stylesheet" href="style/animation.css">
+    <link rel="stylesheet" href="style/media.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <title>Space</title>
+</head>
+
+<body ontouchstart="">
+    <section class="section1" data-aos="fade-in" data-aos-duration="1300" aos-delay="100">
+        <section class="paralax">
+            <h1 class="title" id='text'>space</h1>
+            <h5 class="subTitle" id='subTitle'>a portfolio of professionally run stake pools</h5>
+            <div class="parallax__layer--backSmoke" id="smokeBack"></div>
+            <div class="parallax__layer--back" id="astronaut"></div>
+            <div class="parallax__layer--base" id="smoke"></div>
+        </section>
+    </section>
+    <section class="section3" id="section3">
+        <h1 class="title">STAKE POOLS</h1>
+        <div class="planetBlock">
+            <div class="planet flip-card mars" data-aos="fade-right" data-aos-duration="2000" aos-delay="1000">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        Mars
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>MARS</h1>
+                        <p class="text">Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being only larger than Mercury.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="planet flip-card moon" data-aos="fade-right" data-aos-duration="2000" aos-delay="1000">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        moon
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>MOON</h1>
+                        <p class="text">The Moon is an astronomical body orbiting Earth and is the planet's only natural satellite.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="planet flip-card center" data-aos="fade-in" data-aos-duration="2000" aos-delay="1000">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        space
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>SPACE</h1>
+                        <p class="text">Space is the boundless three-dimensional extent in which objects and events have relative position and direction</p>
+                    </div>
+                </div>
+            </div>
+            <div class="planet flip-card venus" data-aos="fade-left" data-aos-duration="2000" aos-delay="1000">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        venus
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>VENUS</h1>
+                        <p class="text">Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="planet flip-card pluto" data-aos="fade-left" data-aos-duration="2000" aos-delay="1000">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        pluto
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>PLUTO</h1>
+                        <p class="text">Pluto is an icy dwarf planet in the Kuiper belt, a ring of bodies beyond the orbit of Neptune. It was the first and the largest Kuiper belt object to be discovered.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script type="text/javascript">
+        let astronaut = document.getElementById("astronaut");
+        let smoke = document.getElementById("smoke");
+        let smokeBack = document.getElementById("smokeBack");
+        let text = document.getElementById("text");
+        let subTitle = document.getElementById("subTitle");
+        scroll = window.pageYOffset;
+
+        window.addEventListener('scroll', function() {
+            var value = window.scrollY;
+
+            astronaut.style.top = -value + 0.7 + 'px';
+            text.style.left = -value + 0.5 + 'px';
+            subTitle.style.right = -value + 0.5 + 'px';
+            //            smoke.style.top = -value + 0.16 + 'px';
+            smokeBack.style.top = value + 0.5 + 'px';
+        });
+        document.addEventListener('scroll', function(e) {
+            var offset = window.pageYOffset;
+            scroll = offset;
+            smoke.style.width = (100 + scroll / 5) + '%';
+        })
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("header").on("click", "a", function(event) {
+                event.preventDefault();
+                var id = $(this).attr('href'),
+                    top = $(id).offset().top;
+                $('body,html').animate({
+                    scrollTop: top
+                }, 1500);
+            });
+            $(".subBtn").click(function() {
+                var name = document.getElementById("name");
+                var email = document.getElementById("email");
+                var message = document.getElementById("message");
+
+                name.value = '';
+                email.value = '';
+                message.value = '';
+
+            })
+        });
+    </script>
+</body></html>

@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Andale Mono;
+    src: url("../font/andale.ttf");
+}
+
+body {
+    color: white;
+    background-color: black;
+    font-family: 'Impact', sans-serif;
+}
+
+.section1 {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.section1 .title {
+    font-size: 12.6vw;
+    line-height: 9.9vw;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 8.8vw;
+    padding: 12.24vw 0 2.6vw 5.63vw;
+    cursor: default;
+    position: relative;
+    z-index: 0;
+}
+
+.section1 .subTitle {
+    font-size: 1.28vw;
+    width: 100%;
+    text-align: right;
+    letter-spacing: 0.1vw;
+    padding: 0 5vw 0;
+    position: relative;
+    z-index: 3;
+    cursor: default;
+    font-family: 'Courier', sans-serif;
+    font-weight: 100;
+}
+
+.parallax__layer--base {
+    background-image: url(../img/smoke.png);
+    background-repeat: no-repeat;
+    background-position: 35% 182%;
+    background-size: 113%;
+}
+
+.parallax__layer--back {
+    background-image: url(../img/Astronaut1.png);
+    background-repeat: no-repeat;
+    background-position: center 108%;
+    background-size: 97%;
+}
+
+.parallax__layer--backSmoke {
+    background-image: url(../img/smoke.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+
+
+.paralax {
+    position: relative;
+    width: 100%;
+    height: 54.5vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.paralax:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, black, transparent);
+    z-index: 1000;
+}
+
+
+.paralax div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+
+#road {
+    z-index: 2;
+}
+
+.paralax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.section3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 4.5vw 0 7.3vw;
+}
+
+.section3 .title {
+    font-size: 2.57vw;
+    letter-spacing: 1vw;
+    margin: 0 0 4vw;
+}
+
+.section3 .planetBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3 .planet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    font-family: Andale Mono;
+    font-weight: 100;
+    letter-spacing: 0.3vw;
+    position: relative;
+}
+
+.section3 .mars {
+    width: 12.5vw;
+    height: 15.5vw;
+    font-size: 22px;
+    margin: 0 1.5vw 0 0;
+}
+
+.section3 .mars .flip-card-front {
+    background-image: url(../img/MARS1.png);
+    background-size: 80%;
+    font-size: 1.1vw;
+    letter-spacing: 1px;
+    color: #ab5535;
+    padding: 0 0 0.5vw;
+}
+
+.section3 .mars .flip-card-inner:hover,
+.section3 .pluto .flip-card-inner:hover {
+    transform: scale(1.5) translateZ(0px) rotateX(-180deg);
+    -webkit-transform: scale(1.5) translateZ(0px) rotateX(-180deg);
+}
+
+.section3 .moon .flip-card-inner:hover,
+.section3 .venus .flip-card-inner:hover {
+    transform: scale(1.5) translateZ(0px) rotateX(-180deg);
+    -webkit-transform: scale(1.5) translateZ(0px) rotateX(-180deg);
+}
+
+.section3 .flip-card-inner:hover {
+    transition-duration: 1.2s !important;
+}
+
+.section3 .mars .flip-card-back {
+    background-image: url(../img/MARS-TILE.png);
+}
+
+.section3 .mars .flip-card-back .text,
+.section3 .pluto .flip-card-back .text {
+    width: 93%;
+}
+
+.section3 .pluto {
+    width: 12.5vw;
+    height: 15.5vw;
+    font-size: 22px;
+    margin: 0 0 0 1.5vw;
+}
+
+.section3 .pluto .flip-card-front {
+    background-image: url(../img/PLUTO1.png);
+    background-size: 80%;
+    font-size: 1.1vw;
+    letter-spacing: 1px;
+    color: #d0b76a;
+    padding: 0 0 0.5vw;
+}
+
+.section3 .pluto .flip-card-back {
+    background-image: url(../img/PLUTO-TILE.png);
+}
+
+.section3 .moon {
+    width: 12.5vw;
+    height: 15.5vw;
+    font-size: 32px;
+    margin: 0 1.5vw 0 0;
+}
+
+.section3 .moon .flip-card-front {
+    background-image: url(../img/MOON1.png);
+    font-size: 1.8vw;
+    letter-spacing: 1px;
+}
+
+.section3 .moon .flip-card-back {
+    background-image: url(../img/MOON-TILE.png);
+}
+
+.section3 .venus {
+    width: 12.5vw;
+    height: 15.5vw;
+    font-size: 32px;
+    margin: 0 0 0 1.5vw;
+}
+
+.section3 .venus .flip-card-front {
+    background-image: url(../img/VENUS1.png);
+    font-size: 1.8vw;
+    letter-spacing: 1px;
+    color: #dabf6f;
+}
+
+.section3 .venus .flip-card-back {
+    background-image: url(../img/VENUS-TILE.png);
+}
+
+.section3 .center {
+    width: 28.7vw;
+    height: 26.4vw;
+    font-size: 62px;
+    z-index: 0;
+}
+
+.section3 .center .flip-card-front {
+    background-image: url(../img/SPACE1.png);
+    font-size: 3.5vw;
+    letter-spacing: -1px;
+    padding: 0 0 1.1vw;
+}
+
+.section3 .center .flip-card-back {
+    background-image: url(../img/SPACE-TILE.png);
+    background-size: 100%;
+    border-radius: 7%;
+}
+
+.section3 .flip-card-back {
+    display: flex;
+    flex-direction: column;
+    padding: 1.9vw 2vw 0 2.5vw;
+    width: 110%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+    background-position: 33% 48%;
+}
+
+.section3 .flip-card-back h1 {
+    text-align: left;
+    width: 100%;
+    text-transform: uppercase;
+    font-family: 'Impact', sans-serif;
+    font-size: 1.3vw;
+    line-height: 1.3vw;
+    letter-spacing: 0.4vw;
+}
+
+.section3 .flip-card-back .text {
+    font-size: 0.6vw;
+    letter-spacing: 0.1vw;
+    margin: 1.5vw 0 2.3vw;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Courier', sans-serif;
+    line-height: 1.3;
+    width: 89%;
+}
+
+.section3 .flip-card-back .bigTitle {
+    font-size: 1vw;
+    letter-spacing: 0.3vw;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Impact', sans-serif;
+}
+
+.section3 .center .flip-card-back {
+    width: 79%;
+    height: 103%;
+    padding: 2.3vw 2vw 0 1.6vw;
+    align-items: center;
+    margin: 0 3vw;
+}
+
+.section3 .center .flip-card-back h1 {
+    font-size: 2.3vw;
+    line-height: 2.3vw;
+    letter-spacing: 0.6vw;
+    text-align: center;
+}
+
+.section3 .center .flip-card-back .text {
+    font-size: 0.9vw;
+    letter-spacing: 0.3vw;
+    margin: 1.5vw 0 2.3vw;
+    line-height: 1.3;
+    width: 100%;
+}
+
+.section3 .center .flip-card-back .bigTitle {
+    font-size: 0.6vw;
+    letter-spacing: 0.1vw;
+}
