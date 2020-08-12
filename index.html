@@ -103,7 +103,7 @@
         window.addEventListener('scroll', function() {
             var value = window.scrollY;
 
-            astronaut.style.top = -value + 0.7 + 'px';
+            astronaut.style.top = -value + 0.5 + 'px';
             text.style.left = -value + 0.5 + 'px';
             subTitle.style.right = -value + 0.5 + 'px';
             //            smoke.style.top = -value + 0.16 + 'px';
@@ -112,7 +112,7 @@
         document.addEventListener('scroll', function(e) {
             var offset = window.pageYOffset;
             scroll = offset;
-            smoke.style.width = (100 + scroll / 5) + '%';
+            smoke.style.width = (100 + scroll / 8) + '%';
         })
     </script>
     <script type="text/javascript">

@@ -30,7 +30,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 8.8vw;
-    padding: 12.24vw 0 2.6vw 5.63vw;
+    padding: 7.24vw 0 2.6vw 5.63vw;
     cursor: default;
     position: relative;
     z-index: 0;
@@ -57,10 +57,10 @@ body {
 }
 
 .parallax__layer--back {
-    background-image: url(../img/Astronaut1.png);
+    background-image: url(../img/Astronaut.png);
     background-repeat: no-repeat;
-    background-position: center 108%;
-    background-size: 97%;
+    background-position: 24% 100%;
+    background-size: 55%;
 }
 
 .parallax__layer--backSmoke {
